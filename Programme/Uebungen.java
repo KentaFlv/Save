@@ -76,8 +76,12 @@ public class Uebungen
             }
     }
     public static void Wertetabelle() {
+        float f=0;
+
             for (float i = -2; i < 3; i = i + 0.1f) {
-                System.out.println(i);
+            
+                f = i*i - 6*i - 4;
+                System.out.println("x="+i + " f(x)="+f);
             }
     }
     public static void Schaltjahr() {
