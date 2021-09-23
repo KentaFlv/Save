@@ -1,7 +1,7 @@
 public class Uebungen
 {
     public static void main(String[] args) {
-        Schaltjahr(2020);
+        Stellenzaehler(0);
     }
         public Uebungen(){
 
@@ -92,8 +92,15 @@ public class Uebungen
                 System.out.println("Dieses Jahr ist kein Schaltjahr");
             }
     }
-    public static void Stellenzaehler() {
-            
+    public static void Stellenzaehler(int Zahl) {
+        int Stellen = 0; 
+        int neueZahl = Zahl;
+        while (neueZahl  != 0) {
+                neueZahl = neueZahl/10;
+                Stellen = Stellen + 1; 
+                System.out.println(neueZahl);
+        }
+        System.out.println("Die Zahl hat " + Stellen + " Stellen.");
     }
     public static void Quersumme() {
 
