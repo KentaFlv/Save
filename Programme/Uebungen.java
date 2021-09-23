@@ -76,19 +76,24 @@ public class Uebungen
             }
     }
     public static void Wertetabelle() {
-        float f=0;
+            float y=0;
 
-            for (float i = -2; i < 3; i = i + 0.1f) {
+            for (float x = -2; x < 3; x = x + 0.1f) {
             
-                f = i*i - 6*i - 4;
-                System.out.println("x="+i + " f(x)="+f);
+                y = x*x - 6*x - 4;
+                System.out.println("x="+x + " f(x)="+y);
             }
     }
     public static void Schaltjahr() {
-
+            if (Jahr == 4) {
+                System.out.println("Dieses Jahr ist ein Schaltjahr");
+            }
+            else {
+                System.out.println("Dieses Jahr ist kein Schaltjahr");
+            }
     }
     public static void Stellenzaehler() {
-
+        
     }
     public static void Quersumme() {
 
