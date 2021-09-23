@@ -1,7 +1,7 @@
 public class Uebungen
 {
     public static void main(String[] args) {
-        Wertetabelle();
+        Schaltjahr(2020);
     }
         public Uebungen(){
 
@@ -84,8 +84,8 @@ public class Uebungen
                 System.out.println("x="+x + " f(x)="+y);
             }
     }
-    public static void Schaltjahr() {
-            if (Jahr == 4) {
+    public static void Schaltjahr(int Jahr) {
+            if (Jahr % 4 == 0) {
                 System.out.println("Dieses Jahr ist ein Schaltjahr");
             }
             else {
@@ -93,7 +93,7 @@ public class Uebungen
             }
     }
     public static void Stellenzaehler() {
-        
+            
     }
     public static void Quersumme() {
 
@@ -114,6 +114,6 @@ public class Uebungen
 
     }
     public static void Lottozahlen() {
-        
+
     }
 }
