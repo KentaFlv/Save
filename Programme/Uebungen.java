@@ -1,7 +1,7 @@
 public class Uebungen
 {
     public static void main(String[] args) {
-        Stellenzaehler(0);
+        Dualzahl();
     }
         public Uebungen(){
 
@@ -95,18 +95,40 @@ public class Uebungen
     public static void Stellenzaehler(int Zahl) {
         int Stellen = 0; 
         int neueZahl = Zahl;
-        while (neueZahl  != 0) {
-                neueZahl = neueZahl/10;
-                Stellen = Stellen + 1; 
-                System.out.println(neueZahl);
+        if (Zahl == 0) {
+            System.out.println("Die Zahl hat 1 Stelle.");
         }
-        System.out.println("Die Zahl hat " + Stellen + " Stellen.");
+        else {
+            while (neueZahl  != 0) {
+                neueZahl = neueZahl/10;
+                Stellen = Stellen + 1;
+        }
+                System.out.println("Die Zahl hat " + Stellen + " Stellen.");
+        }
+        
     }
-    public static void Quersumme() {
-
+    public static void Quersumme(int Zahl) {
+        int Zahlend = Zahl;
+        int Zahl1 = Zahl % 10;
+        Zahl /= 10;
+        int Zahl2 = Zahl % 10;
+        Zahl /= 10;
+        int Zahl3 = Zahl % 10;
+        Zahl /= 10;
+        int Zahl4 = Zahl % 10;
+        Zahl /= 10;
+        int Zahl5 = Zahl % 10;
+        Zahl /= 10;
+        int Zahl6 = Zahl % 10;
+        Zahl /= 10;
+        int Zahl7 = Zahl % 10;
+        Zahl /= 10;
+        int Quersumme = Zahl1 + Zahl2 + Zahl3 + Zahl4 + Zahl5 + Zahl6 + Zahl7;
+        System.out.println("Die Quersumme von " + Zahlend + " ist " + Quersumme + "!");
+        
     }
     public static void Dualzahl() {
-
+        
     }
     public static void Zahlendreher() {
 
