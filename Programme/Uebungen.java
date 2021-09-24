@@ -1,7 +1,7 @@
 public class Uebungen
 {
     public static void main(String[] args) {
-        Dualzahl();
+        Dualzahl(1011100101);
     }
         public Uebungen(){
 
@@ -95,6 +95,7 @@ public class Uebungen
     public static void Stellenzaehler(int Zahl) {
         int Stellen = 0; 
         int neueZahl = Zahl;
+
         if (Zahl == 0) {
             System.out.println("Die Zahl hat 1 Stelle.");
         }
@@ -102,13 +103,13 @@ public class Uebungen
             while (neueZahl  != 0) {
                 neueZahl = neueZahl/10;
                 Stellen = Stellen + 1;
-        }
+            }
                 System.out.println("Die Zahl hat " + Stellen + " Stellen.");
         }
         
     }
     public static void Quersumme(int Zahl) {
-        int Zahlend = Zahl;
+        int ZahlEnd = Zahl;
         int Zahl1 = Zahl % 10;
         Zahl /= 10;
         int Zahl2 = Zahl % 10;
@@ -124,11 +125,24 @@ public class Uebungen
         int Zahl7 = Zahl % 10;
         Zahl /= 10;
         int Quersumme = Zahl1 + Zahl2 + Zahl3 + Zahl4 + Zahl5 + Zahl6 + Zahl7;
-        System.out.println("Die Quersumme von " + Zahlend + " ist " + Quersumme + "!");
+        System.out.println("Die Quersumme von " + ZahlEnd + " ist " + Quersumme + "!");
         
     }
-    public static void Dualzahl() {
+    public static void Dualzahl(long BinärZahl) {
+        int Stellen =0;
+        int DezimalZahl=0;
+        long Rest=0;
+        long SaveBinärZahl = BinärZahl;
+
+        while (BinärZahl !=0){
+			Rest=BinärZahl % 10;
+			DezimalZahl = DezimalZahl+(int)(Rest*(Math.pow(2, Stellen)));	
+			BinärZahl=BinärZahl / 10;
+			Stellen=Stellen+1;
+
         
+		}
+        System.out.println("Die Binärzahl " + SaveBinärZahl + " ist im Zehnersystem " + DezimalZahl + "!");
     }
     public static void Zahlendreher() {
 
