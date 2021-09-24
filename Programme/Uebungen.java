@@ -1,7 +1,7 @@
 public class Uebungen
 {
     public static void main(String[] args) {
-        Dualzahl(1011100101);
+        Zahlendreher(321);
     }
         public Uebungen(){
 
@@ -144,11 +144,17 @@ public class Uebungen
 		}
         System.out.println("Die Binärzahl " + SaveBinärZahl + " ist im Zehnersystem " + DezimalZahl + "!");
     }
-    public static void Zahlendreher() {
-
-    }
+    public static void Zahlendreher(int Nummer) {
+        int SaveNummer = Nummer;    
+        int UmgedrehteZahl = 0;
+            do{
+                UmgedrehteZahl= UmgedrehteZahl * 10 + (UmgedrehteZahl % 10);
+                Nummer /= 10;
+            } while  (Nummer > 0);
+            System.out.println("Die umgedrehte Zahl von " + SaveNummer + " ist: " + UmgedrehteZahl + "!");
+        }
     public static void Pi() {
-
+        
     }
     public static void XQuadrat() {
 
